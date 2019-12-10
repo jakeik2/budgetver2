@@ -31,7 +31,7 @@
         android:layout_weight="1"
         android:ems="10"
         android:fontFamily="@font/actor"
-        android:text="Item:"
+        android:text="Thing:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,7 +45,7 @@
         android:layout_weight="1"
         android:ems="10"
         android:fontFamily="@font/actor"
-        android:text="cost:"
+        android:text="Cost:"
         app:layout_constraintEnd_toStartOf="@+id/AddItemToList"
         app:layout_constraintStart_toEndOf="@+id/thing"
         app:layout_constraintTop_toTopOf="parent" />

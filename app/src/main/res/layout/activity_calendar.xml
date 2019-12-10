@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calendar">
+
+    <TextView
+        android:id="@+id/text_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="Daily Expenses"
+        android:textAlignment="center"
+        android:textColor="#313131"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Purchases"
+        android:layout_width="391dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="100dp"
+        android:textAlignment="center"
+        android:textSize="45sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/calendarFromCost"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Expenses"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/addFromCost"
+        app:layout_constraintTop_toBottomOf="@+id/Purchases"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/calendarFromCalendar"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:text="Calendar"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/calendarFromCost"
+        app:layout_constraintStart_toEndOf="@+id/addFromCost" />
+
+    <Button
+        android:id="@+id/addFromCost"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Add Charge"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Purchases"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/CalendarFragment"
+        android:layout_width="401dp"
+        android:layout_height="544dp"
+        android:layout_marginBottom="350dp"
+        android:gravity="clip_horizontal|center"
+        android:outlineAmbientShadowColor="#00A51616"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CalendarView
+            android:id="@+id/CalendarView"
+            android:layout_width="450dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="150dp"
+            android:focusedMonthDateColor="#00681515"
+            android:outlineAmbientShadowColor="#00BD2020"
+            android:selectedWeekBackgroundColor="#2196F3"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </CalendarView>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

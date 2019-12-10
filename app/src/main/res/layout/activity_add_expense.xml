@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="345dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="110dp"
+        android:background="@android:color/white"
+        android:calendarTextColor="@color/colorPrimary"
+        android:datePickerMode="calendar"
+        android:headerBackground="@color/colorPrimary"
+        android:outlineAmbientShadowColor="@color/colorPrimary"
+        android:outlineSpotShadowColor="@color/colorPrimary"
+        android:yearListSelectorColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/additemstocal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/thing"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:text="Item:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cost"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="4dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:text="cost:"
+        app:layout_constraintEnd_toStartOf="@+id/AddItemToList"
+        app:layout_constraintStart_toEndOf="@+id/thing"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/AddItemToList"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:backgroundTint="#CCCECE"
+        android:text="Add Charge"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/additemstocal"
+        android:layout_width="240dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="10dp"
+        android:text="Add Charge To Calendar"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+    <Button
+        android:id="@+id/calendarFromCost"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:text="Expenses"
+        android:textColor="#FAFAFA"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addFromCost" />
+
+    <Button
+        android:id="@+id/addFromCost"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorPrimary"
+        android:outlineAmbientShadowColor="#2196F3"
+        android:text="Calendar"
+        android:textColor="#FAFAFA"
+        android:textColorHint="#0F7463"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/calendarFromCost"
+        app:layout_constraintStart_toEndOf="@+id/addFromAdd" />
+
+    <Button
+        android:id="@+id/addFromAdd"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="6dp"
+        android:layout_weight="1"
+        android:text="Add Charge"
+        android:textColor="#0F7463"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addFromCost"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

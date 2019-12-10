@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".cost">
+
+    <Button
+        android:id="@+id/calendarFromCost"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Calendar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/expenseFromExpense"
+        app:layout_constraintStart_toEndOf="@+id/addFromCost"
+        app:layout_constraintTop_toBottomOf="@+id/Purchases"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/expenseFromExpense"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="236dp"
+        android:layout_weight="1"
+        android:text="Expenses"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calendarFromCost"
+        app:layout_constraintTop_toBottomOf="@+id/yCost"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/addFromCost"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Add Charge"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Purchases"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/yCost"
+        android:layout_width="90dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="120.5dp"
+        android:layout_marginRight="120.5dp"
+        android:layout_marginBottom="305dp"
+        android:text="yearly cost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mCost" />
+
+    <TextView
+        android:id="@+id/yearlyExpenses"
+        android:layout_width="80dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="120.5dp"
+        android:layout_marginLeft="120.5dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="305dp"
+        android:text="Yearly : "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monthlyExpenses" />
+
+    <TextView
+        android:id="@+id/mCost"
+        android:layout_width="90dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="120.5dp"
+        android:layout_marginRight="120.5dp"
+        android:layout_marginBottom="51dp"
+        android:text="monthly cost"
+        app:layout_constraintBottom_toTopOf="@+id/yCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dCost" />
+
+    <TextView
+        android:id="@+id/monthlyExpenses"
+        android:layout_width="80dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="120.5dp"
+        android:layout_marginLeft="120.5dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="51dp"
+        android:text="Monthly : "
+        app:layout_constraintBottom_toTopOf="@+id/yearlyExpenses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyExpenses" />
+
+    <TextView
+        android:id="@+id/dCost"
+        android:layout_width="90dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="120.5dp"
+        android:layout_marginRight="120.5dp"
+        android:layout_marginBottom="43dp"
+        android:text="daily cost"
+        app:layout_constraintBottom_toTopOf="@+id/mCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/budgetApp" />
+
+    <TextView
+        android:id="@+id/dailyExpenses"
+        android:layout_width="80dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="120.5dp"
+        android:layout_marginLeft="120.5dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="43dp"
+        android:text="Daily : "
+        app:layout_constraintBottom_toTopOf="@+id/monthlyExpenses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/budgetApp" />
+
+    <TextView
+        android:id="@+id/budgetApp"
+        android:layout_width="189dp"
+        android:layout_height="53dp"
+        android:textAlignment="center"
+        android:textColor="#AB070707"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

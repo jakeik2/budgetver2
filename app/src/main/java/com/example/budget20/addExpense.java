@@ -48,9 +48,7 @@ public class addExpense extends AppCompatActivity implements Serializable {
             @Override
             public void onDateChanged(DatePicker datePicker, int year, int month, int dayOfMonth) {
                 currentDate = new Date(year, month + 1, dayOfMonth);
-                //map.put(currentDate, purchase);
-//                map.put(currentDate, purchase);
-//                System.out.println(map.get(currentDate).toString());
+
             }
         });
 

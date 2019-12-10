@@ -25,6 +25,10 @@ public class calendar extends AppCompatActivity implements Serializable {
         Intent intent = getIntent();
         map = (HashMap<Date, Purchase>)intent.getSerializableExtra("map");
 
+        if (map == null) {
+            map = new HashMap<Date, Purchase>();
+        }
+
         setContentView(R.layout.activity_calendar);
         CalendarView calendarView = findViewById(R.id.CalendarView);
         TextView purchases = findViewById(R.id.Purchases);

@@ -43,6 +43,6 @@ public class cost extends AppCompatActivity implements Serializable{
         overridePendingTransition(R.anim.slideinright, R.anim.slideoutleft);
         finish();
     }
-    
+
 
 }

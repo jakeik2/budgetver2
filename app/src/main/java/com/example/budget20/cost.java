@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.io.Serializable;
 
 public class cost extends AppCompatActivity implements Serializable{
-    public HashMap<Date, Purchase> map;
+    public HashMap<Date, ArrayList<Purchase>> map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +23,10 @@ public class cost extends AppCompatActivity implements Serializable{
         setTitle("Expenses");
 
         Intent intent = getIntent();
-        map = (HashMap<Date, Purchase>)intent.getSerializableExtra("map");
+        map = (HashMap<Date, ArrayList<Purchase>>)intent.getSerializableExtra("map");
 
         if (map == null) {
-            map = new HashMap<Date, Purchase>();
+            map = new HashMap<Date, ArrayList<Purchase>>();
         }
 
         TextView daily = findViewById(R.id.dCost);
@@ -34,8 +34,8 @@ public class cost extends AppCompatActivity implements Serializable{
         TextView monthly = findViewById(R.id.yCost);
 
         double allvalues = 0.0;
-        for (HashMap.Entry<Date, Purchase> entry : map.entrySet()) {
-            allvalues += entry.getValue().getCost();
+        for (HashMap.Entry<Date, ArrayList<Purchase>> entry : map.entrySet()) {
+            allvalues += entry.getValue().get(0).getCost();
         }
         daily.setText(Double.toString((allvalues/map.size()) ));
         weekly.setText(Double.toString((allvalues/map.size()) * 7));
@@ -68,7 +68,4 @@ public class cost extends AppCompatActivity implements Serializable{
     public void crash() {
         finish();
     }
-
-
-
 }

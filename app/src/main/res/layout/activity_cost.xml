@@ -18,7 +18,7 @@ tools:context=".cost">
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/expenseFromExpense"
         app:layout_constraintStart_toEndOf="@+id/addFromCost"
-        app:layout_constraintTop_toBottomOf="@+id/Purchases"
+        app:layout_constraintTop_toBottomOf="@+id/Purchases1"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -50,7 +50,7 @@ tools:context=".cost">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Purchases"
+        app:layout_constraintTop_toBottomOf="@+id/Purchases1"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView

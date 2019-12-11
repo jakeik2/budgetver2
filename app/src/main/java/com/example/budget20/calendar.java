@@ -9,12 +9,11 @@ import android.widget.CalendarView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.io.Serializable;
 
 public class calendar extends AppCompatActivity implements Serializable {
-    public HashMap<Date, Purchase> map;
+    public HashMap<Date, ArrayList<Purchase>> map;
     public Date selected;
 
     @Override
@@ -23,24 +22,26 @@ public class calendar extends AppCompatActivity implements Serializable {
         setTitle("Calendar");
 
         Intent intent = getIntent();
-        map = (HashMap<Date, Purchase>)intent.getSerializableExtra("map");
+        map = (HashMap<Date, ArrayList<Purchase>>)intent.getSerializableExtra("map");
 
         if (map == null) {
-            map = new HashMap<Date, Purchase>();
+            map = new HashMap<Date, ArrayList<Purchase>>();
         }
 
         setContentView(R.layout.activity_calendar);
         CalendarView calendarView = findViewById(R.id.CalendarView);
-        TextView purchases = findViewById(R.id.Purchases);
+        TextView purchases = findViewById(R.id.Purchases1);
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month,
                                             int dayOfMonth) {
                 selected = new Date(year, month + 1, dayOfMonth);
                 //System.out.println("calendar: " + map.get(selected).toString());
-                for (HashMap.Entry<Date, Purchase> entry : map.entrySet()) {
-                    if (entry.getKey().equals(selected)) {
-                        purchases.setText(entry.getValue().toString());
+                for (HashMap.Entry<Date, ArrayList<Purchase>> entry : map.entrySet()) {
+                    for (int i = 0; i < entry.getValue().size(); i++) {
+                        if (entry.getKey().equals(selected)) {
+                            purchases.setText(entry.getValue().get(0).toString());
+                        }
                     }
                 }
 

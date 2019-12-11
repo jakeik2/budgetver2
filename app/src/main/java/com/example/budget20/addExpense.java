@@ -13,12 +13,13 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.io.Serializable;
 
 public class addExpense extends AppCompatActivity implements Serializable {
-    public HashMap<Date, Purchase> map;
+    public HashMap<Date, ArrayList<Purchase>> map;
     public Date currentDate;
     public Purchase purchase;
 
@@ -28,7 +29,7 @@ public class addExpense extends AppCompatActivity implements Serializable {
         setContentView(R.layout.activity_add_expense);
 
         Intent intent = getIntent();
-        map = (HashMap<Date, Purchase>)intent.getSerializableExtra("map");
+        map = (HashMap<Date, ArrayList<Purchase>>)intent.getSerializableExtra("map");
 
         setTitle("Add Charges");
 
@@ -39,7 +40,7 @@ public class addExpense extends AppCompatActivity implements Serializable {
         costFromAdd.setOnClickListener(unused-> toCost());
 
         if (map == null) {
-            map = new HashMap<Date, Purchase>();
+            map = new HashMap<Date, ArrayList<Purchase>>();
         }
         DatePicker datePicker = (DatePicker)findViewById(R.id.datePicker);
         Calendar calendar = Calendar.getInstance();
@@ -59,9 +60,11 @@ public class addExpense extends AppCompatActivity implements Serializable {
             String thingString = thing.getText().toString();
             Double costDouble = Double.parseDouble(cost.getText().toString());
 
-            purchase = new Purchase(thingString, costDouble);
+
+            ArrayList<Purchase> purchases = new ArrayList<>();
+            purchases.add(new Purchase(thingString, costDouble));
             //System.out.println("add expense: " + currentDate.toString());
-            map.put(currentDate, purchase);
+            map.put(currentDate, purchases);
         });
 
     }

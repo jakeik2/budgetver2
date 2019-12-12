@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Outline;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
@@ -19,6 +20,7 @@ import java.util.HashMap;
 import java.io.Serializable;
 
 public class addExpense extends AppCompatActivity implements Serializable {
+    private ArrayList<Purchase> purchases = new ArrayList<>();
     public HashMap<Date, ArrayList<Purchase>> map;
     public Date currentDate;
     public Purchase purchase;
@@ -61,10 +63,13 @@ public class addExpense extends AppCompatActivity implements Serializable {
             Double costDouble = Double.parseDouble(cost.getText().toString());
 
 
-            ArrayList<Purchase> purchases = new ArrayList<>();
             purchases.add(new Purchase(thingString, costDouble));
             //System.out.println("add expense: " + currentDate.toString());
-            map.put(currentDate, purchases);
+            Log.d("as", "dateChanged");
+            ArrayList<Purchase> a = map.getOrDefault(currentDate, new ArrayList<Purchase>());
+            a.add(new Purchase(thingString, costDouble));
+            map.put(currentDate, a);
+            purchases.clear();
         });
 
     }

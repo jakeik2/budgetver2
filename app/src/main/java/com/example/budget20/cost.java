@@ -37,9 +37,9 @@ public class cost extends AppCompatActivity implements Serializable{
         for (HashMap.Entry<Date, ArrayList<Purchase>> entry : map.entrySet()) {
             allvalues += entry.getValue().get(0).getCost();
         }
-        daily.setText(Double.toString((allvalues/map.size()) ));
-        weekly.setText(Double.toString((allvalues/map.size()) * 7));
-        monthly.setText(Double.toString((allvalues/map.size()) * 30));
+        daily.setText(Double.toString(Math.round(allvalues/map.size() * 100.0) / 100.0));
+        weekly.setText(Double.toString(Math.round((allvalues/map.size()) * 7 * 100.0) / 100.0));
+        monthly.setText(Double.toString(Math.round((allvalues/map.size()) * 30 * 100.0) / 100.0));
 
         Button calendarFromCost = findViewById(R.id.calendarFromCost);
         calendarFromCost.setOnClickListener(unused-> toCalendar());

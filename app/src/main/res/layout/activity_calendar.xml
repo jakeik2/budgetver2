@@ -6,6 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".calendar">
 
+    <Button
+        android:id="@+id/addFromCost"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/actor"
+        android:text="Add Charge"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalendarFragment"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="225dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/calendarFromCalendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/Purchases1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/actor"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/Purchases2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/actor"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/Purchases3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/actor"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/Purchases4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/actor"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/Purchases5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/actor"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/text_dashboard"
         android:layout_width="match_parent"
@@ -22,64 +89,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/Purchases1"
-        android:layout_width="0dp"
-        android:layout_height="32dp"
-        android:fontFamily="@font/actor"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/Purchases2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/Purchases2"
-        android:layout_width="0dp"
-        android:layout_height="32dp"
-        android:fontFamily="@font/actor"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/Purchases3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/Purchases3"
-        android:layout_width="0dp"
-        android:layout_height="32dp"
-        android:fontFamily="@font/actor"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/Purchases4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/Purchases4"
-        android:layout_width="0dp"
-        android:layout_height="32dp"
-        android:fontFamily="@font/actor"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/Purchases5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/Purchases5"
-        android:layout_width="0dp"
-        android:layout_height="32dp"
-        android:fontFamily="@font/actor"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/calendarFromCost"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/calendarFromCost"
         android:layout_width="133dp"
@@ -92,8 +101,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/addFromCost"
-        app:layout_constraintTop_toBottomOf="@+id/Purchases1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalendarFragment"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -105,23 +114,10 @@
         android:text="Calendar"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/calendarFromCost"
-        app:layout_constraintStart_toEndOf="@+id/addFromCost" />
-
-    <Button
-        android:id="@+id/addFromCost"
-        android:layout_width="133dp"
-        android:layout_height="65dp"
-        android:layout_weight="1"
-        android:backgroundTint="@color/colorPrimary"
-        android:fontFamily="@font/actor"
-        android:text="Add Charge"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Purchases1"
+        app:layout_constraintTop_toBottomOf="@+id/CalendarFragment"
         app:layout_constraintVertical_bias="1.0" />
 
     <LinearLayout

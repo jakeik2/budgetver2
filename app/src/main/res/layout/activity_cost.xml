@@ -82,10 +82,10 @@ tools:context=".cost">
         android:id="@+id/mCost"
         android:layout_width="150dp"
         android:layout_height="65dp"
-        android:textColor="#313131"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="42dp"
         android:fontFamily="@font/actor"
+        android:textColor="#313131"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dCost" />
@@ -108,9 +108,9 @@ tools:context=".cost">
         android:layout_width="150dp"
         android:layout_height="65dp"
         android:layout_marginTop="140dp"
-        android:textColor="#313131"
         android:layout_marginEnd="40dp"
         android:fontFamily="@font/actor"
+        android:textColor="#313131"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -161,5 +161,42 @@ tools:context=".cost">
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/yCost" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="24dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/exit"
+        app:layout_constraintEnd_toStartOf="@+id/dCost"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/dailyExpenses"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.110000014"
+        app:srcCompat="@drawable/a37224" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="24dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/exit"
+        app:layout_constraintEnd_toStartOf="@+id/mCost"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/monthlyExpenses"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.48000002"
+        app:srcCompat="@drawable/a37224" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="24dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/exit"
+        app:layout_constraintEnd_toStartOf="@+id/yCost"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/yearlyExpenses"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.84000003"
+        app:srcCompat="@drawable/a37224" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
